@@ -1,0 +1,140 @@
+<div class="container">
+
+  <% @page_title = "Rails 6 Configuration" %>
+
+
+  <!-- *************  jQuery  ************* -->
+
+  <h4>jQuery</h4>
+
+  <script>
+    $(() => { $('.jquery-test').html("jQuery is working!") })
+  </script>
+
+  <p class="jquery-test">jQuery is not working.</p>
+
+
+  <!-- *************  Turbolinks  ************* -->
+
+  <h4>Turbolinks</h4>
+
+  <p>Page ready counter is <span id="page-ready">0</span></p>
+
+  <p id="turbolinks-result">Navigate to another page, then back here. If nothing changes, Turbolinks is not running.</p>
+
+  <script>
+    $(() => {
+      window.pageready = window.pageready ? window.pageready + 1 : 1
+      $('#page-ready').html(window.pageready)
+      if (window.pageready > 1) {
+        $('#turbolinks-result').html('Turbolinks work!')
+      }
+    })
+  </script>
+
+
+  <!-- *************  Font Awesome  ************* -->
+
+  <h4>Font Awesome</h4>
+
+  <p>font-awesome is <icon class="fa fa-thumbs-o-up" /></p>
+
+
+  <!--  *************  jQuery Date Picker  ************* -->
+
+  <h4 class="mt-4">jQuery-ui Date Picker</h4>
+
+  <p>
+    <a href="https://jqueryui.com/datepicker/">Datepicker Doc</a>
+    <br />
+    <a href="https://api.jqueryui.com/datepicker/">Datepicker API</a>
+  </p>
+
+  <p>TODO: Map node_modules/jquery-ui-dist/images/* to /assets/images/*</p>
+
+  <script>
+    $(() => { $('.datepicker').datepicker() })
+  </script>
+
+  <p>Date: <input type="text" id="datepicker2" class="datepicker"></p>
+
+
+  <!-- *************  Datatables.net  ************* -->
+
+  <h4>Datatables.net</h4>
+
+  <table id="table_id" class="display">
+    <thead>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    var data = [
+      [ "John", "Gorman" ],
+      [ "Barak", "Obama" ],
+      [ "Nelson", "Mandela" ],
+    ]
+$(() => { $('#table_id').DataTable({ data }) })
+  </script>
+
+
+  <!-- *************  Bootstrap Tooltips  ************* -->
+
+  <h4 class="mt-4">Bootstrap Tooltips</h4>
+
+  <p><a href="https://getbootstrap.com/docs/4.0/components/tooltips/">Tooltips Doc</a></p>
+
+  <script>
+    $(() => { $('[data-toggle="tooltip"]').tooltip() })
+  </script>
+
+  <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+    Tooltip on top
+  </button>
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+    Tooltip on right
+  </button>
+
+
+  <!-- *************  Bootstrap Modal  ************* -->
+
+  <h4 class="mt-4">Bootstrap Modal</h4>
+
+  <p><a href="https://getbootstrap.com/docs/4.0/components/modal/">Modal Doc</a></p>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Bootstrap modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Webpacker is working!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="mt-5" />
+
+</div>
