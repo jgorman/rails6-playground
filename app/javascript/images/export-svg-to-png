@@ -1,0 +1,8 @@
+# brew install batik
+
+batik-rasterizer -dpi 2048 -h 512 -w 512 jg-logo.svg \
+  -d jg-logo-512x512.png
+
+batik-rasterizer -dpi 2048 -h 50 -w 50 jg-logo.svg \
+  -d jg-logo-50x50.png
+

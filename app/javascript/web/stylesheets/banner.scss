@@ -1,0 +1,103 @@
+
+/* * * * * *
+ * Variables
+ */
+
+$particles-background-color: #aaaaaa;
+$logo-gold:   #ffd700;
+$logo-red:    #ff0000;
+$logo-green:  #00bb00;
+$logo-blue:   #6666ff;
+
+
+/* * * * * * * * * * *
+ * Top banner section
+ */
+
+/* The banner particles canvas container. */
+#particles-js
+{
+  background-color: $particles-background-color;
+  position: relative;
+  height: 150px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* * * * * * * * * * * * *
+ * Wide screen top banner
+ */
+
+#logo-jgio
+{
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  font-size: 50px;
+
+  .hostname {
+    color: $logo-blue;
+  }
+  .dot {
+    color: $logo-red;
+  }
+  .cc {
+    color: $logo-green;
+  }
+}
+
+#logo-jgio a {
+  text-decoration: none;
+}
+
+#logo
+{
+  height: 50px;
+  width: 50px;
+}
+
+#user-info
+{
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  font-size: 18px;
+  color: $logo-gold;
+}
+
+#banner-title
+{
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+  font-size: 30px;
+  color: $logo-gold;
+}
+
+
+/* * * * * * * * * * * * * *
+ * Narrow screen top banner
+ */
+
+@media screen and (max-width: 450px) {
+  #logo-jgio
+  {
+    top: 45px;
+    left: 10px;
+    font-size: 35px;
+  }
+
+  #logo
+  {
+    height: 35px;
+    width: 35px;
+  }
+
+  #playground
+  {
+    right: 10px;
+    font-size: 25px;
+  }
+}

@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rails6Playground</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
 
-    <%= stylesheet_pack_tag 'web', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'web', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
 
-  <body>
-    <%= yield %>
-  </body>
+  <link rel="shortcut icon" href="<%= image_pack("jg-logo-50x50.png") %>">
+
+  <title><%= page_title %></title>
+  <meta name="description" content="<%= page_title %>"/>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_pack_tag 'web', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'web', 'data-turbolinks-track': 'reload' %>
+
+  <script>
+    /*
+    $(document).ready(() => {
+      particlesConfig.particles.shape.image.src =
+        "<%= image_pack("jg-logo-512x512.png") %>"
+      particlesJS("particles-js", particlesConfig);
+    })
+    */
+  </script>
+
+</head>
+
+<body>
+
+<div class="container-fluid font-weight-light">
+
+  <div id="particles-js">
+    <div id="logo-jgio">
+      <a href="/">
+        <%= image_pack_tag "jg-logo.svg", id: 'logo' %>
+        <span class="hostname">johngorman</span
+        ><span class="dot">.</span
+        ><span class="cc">io</span>
+      </a>
+    </div>
+
+    <div id="user-info">
+      <%# current_user && current_user.email %>
+    </div>
+
+    <div id="banner-title">
+      Timeless Awareness
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-3">
+      <%= render "layouts/nav" %>
+    </div>
+
+    <div class="col-sm-9 content">
+      <% if !@hide_title %>
+        <h1 class="centered"><%= page_title %></h1>
+      <% end %>
+
+      <% if notice %>
+        <p class="page-notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="page-alert"><%= alert %></p>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </div>
+
+</div>
+</body>
 </html>
