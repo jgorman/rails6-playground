@@ -1,0 +1,22 @@
+/* * * * * * * * * * * *
+ * General site settings
+ */
+
+$headers:   #aaaaaa;
+$labels:    #aaaaaa;
+$nav-bar:   #dddddd;
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  color: $headers;
+}
+
+#nav-bar
+{
+  background-color: $nav-bar;
+}
+
+div.container-fluid div.row label {
+  color: $labels;
+  font-weight: bold;
+}

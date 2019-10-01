@@ -8,6 +8,12 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+// https://github.com/webpack/docs/wiki/context
+const requireAll = context => context.keys().map(context)
+
+requireAll(require.context('../web/stylesheets', true, /\.(scss|css)$/i))
+
+requireAll(require.context('../web/javascript', false, /\.(js|jsx)$/i))
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
