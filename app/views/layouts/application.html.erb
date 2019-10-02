@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
 
-  <link rel="shortcut icon" href="<%= image_pack("jg-logo-50x50.png") %>">
+  <link rel="shortcut icon" href="<%= image_path("jg-logo-50x50.png") %>">
 
   <title><%= page_title %></title>
   <meta name="description" content="<%= page_title %>"/>
@@ -22,7 +22,7 @@
     /*
     $(document).ready(() => {
       particlesConfig.particles.shape.image.src =
-        "<%= image_pack("jg-logo-512x512.png") %>"
+        "<%= image_path("jg-logo-512x512.png") %>"
       particlesJS("particles-js", particlesConfig);
     })
     */
@@ -36,8 +36,7 @@
 
   <div id="particles-js"
     data-controller="particles"
-    data-image="<%= image_pack('jg-logo-512x512.png') %>"
-    data-particles-image="<%= image_pack('jg-logo-512x512.png') %>"
+    data-particles-image="<%= image_path('jg-logo-512x512.png') %>"
   >
     <div id="logo-jgio">
       <a href="/">

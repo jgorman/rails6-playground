@@ -8,7 +8,7 @@ module ApplicationHelper
     @page_title || "Timeless"
   end
 
-  def image_pack(name)
+  def image_path(name)
     asset_pack_path("media/images/#{name}")
   end
 

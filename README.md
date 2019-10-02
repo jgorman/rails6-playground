@@ -1,13 +1,19 @@
-# README
+# Rails 6 Playground
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A place to integrate features into Rails 6.
 
-Things you may want to cover:
+ruby 2.6.3, rails 6.0.0
 
-* Ruby version
+rails new rails6-playground --webpack=react --skip-sprockets \
+  -d postgresql --skip-spring --skip-bootsnap
 
-* System dependencies
+* Configure Webpacker to handle stylesheets and images.
+
+* Get particles.js running under Turbolinks using a Stimulus controller.
+
+* jQuery, bootstrap.
+
+TODO:
 
 * Configuration
 
@@ -20,5 +26,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...

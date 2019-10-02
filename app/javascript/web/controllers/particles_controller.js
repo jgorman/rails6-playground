@@ -3,8 +3,7 @@ import { Controller } from "stimulus"
 /*
 	<div id="particles-js"
     data-controller="particles"
-    data-image="<%= image_pack('jg-logo-512x512.png') %>"
-    data-particles-image="<%= image_pack('jg-logo-512x512.png') %>"
+    data-particles-image="<%= image_path('jg-logo-512x512.png') %>"
 	>
 */
 
