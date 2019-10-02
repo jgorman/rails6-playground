@@ -3,4 +3,7 @@
 $fa-font-path: "~font-awesome/fonts";
 @import '~font-awesome/scss/font-awesome';
 
-@import '~flatpickr/dist/flatpickr'
+@import '~flatpickr/dist/flatpickr';
+@import '~flatpickr/dist/themes/material_red';
+
+@import 'datatables.net-bs4/css/dataTables.bootstrap4';

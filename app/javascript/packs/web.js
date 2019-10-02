@@ -7,6 +7,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+
 /*
  * npm libraries.
  */
@@ -26,6 +27,11 @@ application.register("flatpickr", Flatpickr);
 
 // See ../web/controllers/particles_controller.js
 require('particles.js')
+
+// See https://datatables.net/manual/installation
+require('datatables.net')
+require('datatables.net-bs4')
+
 
 /*
  * App setup.

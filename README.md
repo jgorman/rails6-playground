@@ -15,7 +15,7 @@ rails new rails6-playground --webpack=react --skip-sprockets \
 
 * Stimulus Flatpickr date picker.
 
-[Config](../welcome/rails6_config)
+* Datatables.
 
 TODO:
 
