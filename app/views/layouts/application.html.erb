@@ -34,7 +34,11 @@
 
 <div class="container-fluid font-weight-light">
 
-  <div id="particles-js">
+  <div id="particles-js"
+    data-controller="particles"
+    data-image="<%= image_pack('jg-logo-512x512.png') %>"
+    data-particles-image="<%= image_pack('jg-logo-512x512.png') %>"
+  >
     <div id="logo-jgio">
       <a href="/">
         <%= image_pack_tag "jg-logo.svg", id: 'logo' %>
