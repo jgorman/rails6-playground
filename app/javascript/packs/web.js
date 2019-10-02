@@ -20,6 +20,10 @@ const application = Application.start()
 const controllers = require.context('../web/controllers', true, /\.js$/)
 application.load(definitionsFromContext(controllers))
 
+// See https://github.com/adrienpoly/stimulus-flatpickr
+import Flatpickr from "stimulus-flatpickr";
+application.register("flatpickr", Flatpickr);
+
 // See ../web/controllers/particles_controller.js
 require('particles.js')
 

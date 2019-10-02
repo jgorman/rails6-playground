@@ -9,9 +9,13 @@ rails new rails6-playground --webpack=react --skip-sprockets \
 
 * Configure Webpacker to handle stylesheets and images.
 
+* jQuery, bootstrap.
+
 * Get particles.js running under Turbolinks using a Stimulus controller.
 
-* jQuery, bootstrap.
+* Stimulus Flatpickr date picker.
+
+[Config](../welcome/rails6_config)
 
 TODO:
 

@@ -40,23 +40,28 @@
   <p>font-awesome is <icon class="fa fa-thumbs-o-up" /></p>
 
 
-  <!--  *************  jQuery Date Picker  ************* -->
+  <!--  *************  Flatpickr Date Picker  ************* -->
 
-  <h4 class="mt-4">jQuery-ui Date Picker</h4>
+  <h4 class="mt-4">Flatpickr Date Picker</h4>
 
   <p>
-    <a href="https://jqueryui.com/datepicker/">Datepicker Doc</a>
-    <br />
-    <a href="https://api.jqueryui.com/datepicker/">Datepicker API</a>
+    <a href="https://flatpickr.js.org">Flatpickr Doc</a>
+  <br />
+    <a href="https://github.com/adrienpoly/stimulus-flatpickr">Stimulus Flatpickr Doc</a>
+  <br />
+    <a href="https://github.com/adrienpoly/rails_stimulus_flatpickr">Stimulus Flatpickr Rails Demo</a>
   </p>
 
-  <p>TODO: Map node_modules/jquery-ui-dist/images/* to /assets/images/*</p>
-
-  <script>
-    $(() => { $('.datepicker').datepicker() })
-  </script>
-
-  <p>Date: <input type="text" id="datepicker2" class="datepicker"></p>
+  <%= form_with do |f| %>
+    Enter date:
+    <%= f.text_field :start_time,
+      data: {
+        controller: "flatpickr",
+        flatpickr_date_format: "Y-m-d",
+        flatpickr_min_date: Time.zone.now
+      } %>
+  <% end %>
+  <p class="mt-5" />
 
 
   <!-- *************  Datatables.net  ************* -->
@@ -80,7 +85,7 @@
       [ "Barak", "Obama" ],
       [ "Nelson", "Mandela" ],
     ]
-$(() => { $('#table_id').DataTable({ data }) })
+    // $(() => { $('#table_id').DataTable({ data }) })
   </script>
 
 
@@ -119,7 +124,7 @@ $(() => { $('#table_id').DataTable({ data }) })
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Bootstap modal</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
