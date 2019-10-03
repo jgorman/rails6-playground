@@ -11,6 +11,14 @@ h1, h2, h3, h4, h5 {
   color: $headers;
 }
 
+p.page-notice {
+  color: green;
+}
+
+p.page-alert {
+  color: red;
+}
+
 #nav-bar
 {
   background-color: $nav-bar;
@@ -26,7 +34,6 @@ div.dataTables_filter,
 div.dataTables_info {
   text-align: left !important;
 }
-
 ul.pagination {
   justify-content: flex-start !important;
 }

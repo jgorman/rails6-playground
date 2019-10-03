@@ -100,7 +100,11 @@
       [ "Barak", "Obama" ],
       [ "Nelson", "Mandela" ],
     ]
-    $(() => { $('#table_id').DataTable({ data }) })
+    $(() => {
+      const table = $('#table_id')
+      if (table[0].className.includes('dataTable')) return
+      table.DataTable({ data })
+    })
   </script>
 
 
@@ -152,7 +156,5 @@
       </div>
     </div>
   </div>
-
-  <p class="mt-5" />
 
 </div>
