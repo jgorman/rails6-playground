@@ -1,0 +1,31 @@
+
+<%= form_tag generator_articles_path,
+  'data-controller': 'articles',
+  'data-action': 'ajax:success->articles#show_counts',
+  remote: true, format: :json do %>
+
+  <p>Article count: <span id="article-count"><%= @articles %></span></p>
+  <p>Comment count: <span id="comment-count"><%= @comments %></span></p>
+
+  <p>
+    <%= label_tag :articles, 'Number of articles to generate' %><br>
+    <%= number_field_tag 'articles', 1 %>
+  </p>
+
+  <p>
+    <%= label_tag :comments, 'Comments per article' %><br>
+    <%= number_field_tag 'comments', 2 %>
+  </p>
+
+  <p>
+    <%= label_tag :paragraph_length, 'Paragraph length' %><br>
+    <%= number_field_tag 'paragraph_length', 100 %>
+  </p>
+
+  <p>
+    <%= submit_tag 'Generate!' %>
+  </p>
+
+<% end %>
+
+<%= link_to "Back", articles_path %>

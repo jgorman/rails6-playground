@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def page_title
-    @page_title || "Timeless"
+    @page_title || "Rails 6 Playground"
   end
 
   def image_path(name)

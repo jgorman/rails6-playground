@@ -11,11 +11,13 @@ rails new rails6-playground --webpack=react --skip-sprockets \
 
 * jQuery, bootstrap.
 
-* Get particles.js running under Turbolinks using a Stimulus controller.
+* Particles.js running under Turbolinks using a Stimulus controller.
 
 * Stimulus Flatpickr date picker.
 
 * Datatables.
+
+* Kaminari pagination.
 
 TODO:
 
