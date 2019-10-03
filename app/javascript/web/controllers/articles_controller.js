@@ -35,7 +35,6 @@ const tableConfig = {
 	// ajax: $(table).data('source'),
 	dom: 'lfriptrip',
 	pagingType: 'full_numbers',
-	deverRender: true,
 	scroller: false,
 	scrollY: undefined,
 	columns: [
@@ -48,7 +47,6 @@ export default class extends Controller {
 
   connect() {
     const table = this.element
-		console.log('$$$$$$$ connect.table', {table})
 		const {id, className} = table
 
 		// Initialize the datatable on connect.
@@ -78,5 +76,4 @@ export default class extends Controller {
     $("#article-count").html(data.articles)
     $("#comment-count").html(data.comments)
   }
-
 }

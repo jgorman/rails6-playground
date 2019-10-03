@@ -6,6 +6,14 @@ class ArticlesController < ApplicationController
     #puts "$$$$$$$ #{current_user.inspect}"
   end
 
+  def search
+    @page_title = "Article search"
+  end
+
+  def datatable
+    render json: ArticleDatatable.new(params)
+  end
+
   def show
     @page_title = "Article"
     @article = Article.find(params[:id])

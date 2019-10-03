@@ -1,0 +1,30 @@
+
+<p>
+<%= link_to "New article", new_article_path %>
+|
+<%= link_to "Generate articles", generate_articles_path %>
+|
+Scrolling:
+<input id="toggle-scrolling" type="checkbox" checked
+       data-controller="articles"
+       data-action="change->articles#toggle_scrolling"
+/>
+</p>
+ 
+<div class="table-responsive">
+  <table id="articles-datatable"
+         class="table table-hover table-striped table-bordered text-wrap"
+         data-controller="articles"
+         data-source="<%= datatable_articles_path %>">
+
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+  </table>
+</div>

@@ -3,22 +3,25 @@
   <% @page_title = "Rails 6 Configuration" %>
 
 
-  <!-- *************  jQuery  ************* -->
-
-  <h4>jQuery</h4>
+  <h4 class="mt-4">jQuery and Font Awesome</h4>
+  <!--             ======================= -->
 
   <script>
     $(() => { $('.jquery-test').html("jQuery is working!") })
   </script>
 
   <p class="jquery-test">jQuery is not working.</p>
+  <p>font-awesome is <icon class="fa fa-thumbs-o-up" /></p>
 
 
-  <!-- *************  Turbolinks  ************* -->
+  <h4 class="mt-4">Turbolinks</h4>
+  <!--             ========== -->
 
-  <h4>Turbolinks</h4>
+  <p>
+    <a href="https://github.com/turbolinks/turbolinks">Turbolinks Doc</a>
+  </p>
 
-  <p>The page loaded counter is <span id="page-ready">0</span></p>
+  <p>The page loaded counter is <span id="page-ready">0</span>.</p>
 
   <p id="turbolinks-result">Navigate to another page, then back here.
       If nothing changes, Turbolinks is not running because each visit is
@@ -41,16 +44,8 @@
   </script>
 
 
-  <!-- *************  Font Awesome  ************* -->
-
-  <h4>Font Awesome</h4>
-
-  <p>font-awesome is <icon class="fa fa-thumbs-o-up" /></p>
-
-
-  <!--  *************  Flatpickr Date Picker  ************* -->
-
   <h4 class="mt-4">Flatpickr Date Picker</h4>
+  <!--             ===================== -->
 
   <p>
     <a href="https://flatpickr.js.org">Flatpickr Doc</a>
@@ -73,9 +68,20 @@
   <p class="mt-5" />
 
 
-  <!-- *************  Datatables.net  ************* -->
+  <h4 class="mt-4">Kaminari Pagination</h4>
+  <!--             =================== -->
 
-  <h4>Datatables.net</h4>
+  <p>
+    <a href="https://github.com/kaminari/kaminari">Kaminari Doc</a>
+  </p>
+
+  <p>
+    See <a href="../../articles">Kaminari pagination</a> in action.
+  </p>
+
+
+  <h4 class="mt-4">Datatables.net</h4>
+  <!--             ============== -->
 
   <table id="table_id" class="display">
     <thead>
@@ -98,9 +104,8 @@
   </script>
 
 
-  <!-- *************  Bootstrap Tooltips  ************* -->
-
   <h4 class="mt-4">Bootstrap Tooltips</h4>
+  <!--             ================== -->
 
   <p><a href="https://getbootstrap.com/docs/4.0/components/tooltips/">Tooltips Doc</a></p>
 
@@ -117,9 +122,8 @@
   </button>
 
 
-  <!-- *************  Bootstrap Modal  ************* -->
-
   <h4 class="mt-4">Bootstrap Modal</h4>
+  <!--             =============== -->
 
   <p><a href="https://getbootstrap.com/docs/4.0/components/modal/">Modal Doc</a></p>
 

@@ -15,9 +15,9 @@ rails new rails6-playground --webpack=react --skip-sprockets \
 
 * Stimulus Flatpickr date picker.
 
-* Datatables.
-
 * Kaminari pagination.
+
+* Scrolling Datatables.
 
 TODO:
 

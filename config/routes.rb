@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
     collection do
+      get :search
       get :datatable
       get :generate
       post :generator
