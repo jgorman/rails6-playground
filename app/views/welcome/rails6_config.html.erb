@@ -18,16 +18,24 @@
 
   <h4>Turbolinks</h4>
 
-  <p>Page ready counter is <span id="page-ready">0</span></p>
+  <p>The page loaded counter is <span id="page-ready">0</span></p>
 
-  <p id="turbolinks-result">Navigate to another page, then back here. If nothing changes, Turbolinks is not running.</p>
+  <p id="turbolinks-result">Navigate to another page, then back here.
+      If nothing changes, Turbolinks is not running because each visit is
+      a full page load with a fresh new window object and a fresh
+      page loaded counter.</p>
+
+  <p>The page loaded counter goes up by 2 per visit under Turbolinks.
+     Turbolinks first shows the page preview from cache. When the
+     new page arrives from the server, that replaces the cached
+     copy.</p>
 
   <script>
     $(() => {
       window.pageready = window.pageready ? window.pageready + 1 : 1
       $('#page-ready').html(window.pageready)
       if (window.pageready > 1) {
-        $('#turbolinks-result').html('Turbolinks work!')
+        $('#turbolinks-result').html('Turbolinks is running!')
       }
     })
   </script>

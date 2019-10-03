@@ -31,6 +31,6 @@ REAL_production:
 
 production:
   <<: *default
-  database: timeless_development
+  database: rails6_playground_development
   username: rails
   password: rails123
