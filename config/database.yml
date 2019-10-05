@@ -4,18 +4,16 @@ default: &default
   encoding: unicode
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: rails
+  password: rails123
 
 development:
   <<: *default
   database: rails6_playground_development
-  username: rails
-  password: rails123
 
 test:
   <<: *default
   database: rails6_playground_test
-  username: rails
-  password: rails123
 
 # Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
 # On Heroku and other platform providers, you may have a full connection URL.
@@ -32,5 +30,3 @@ REAL_production:
 production:
   <<: *default
   database: rails6_playground_development
-  username: rails
-  password: rails123
