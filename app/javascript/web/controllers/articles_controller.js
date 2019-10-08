@@ -1,79 +1,60 @@
 import { Controller } from "stimulus"
 
 /*
- * In app/view/articles/search.html.erb
+ * In app/view/articles/generate.html.erb
  *
 
-  <table class="table" id="articles-datatable"
-         data-controller="articles"
-         data-source="<%= datatable_articles_path %>">
-
-	<input id="toggle-scrolling" type="checkbox" checked
-				data-controller="articles"
-				data-action="change->articles#toggle_scrolling" />
+		<%= form_tag generator_articles_path,
+			'data-controller': 'articles',
+			'data-action': 'ajax:success->articles#show_counts',
+			remote: true, format: :json do
+		%>
 
 */
 
 /*
- * In app/view/articles/generate.html.erb
+ * In app/view/articles/search.html.erb
  *
 
-	<%= form_tag generator_articles_path,
-		'data-controller': 'articles',
-		'data-action': 'ajax:success->articles#show_counts',
-		remote: true, format: :json do %>
+		<input id="toggle-scrolling" type="checkbox" checked
+			data-controller="articles"
+			data-action="change->articles#toggle_scrolling"
+		/>
 
 */
 
-var tableHandle
-
-const scrollY = 600
-
-const tableConfig = {
-	processing: true,
-	serverSide: true,
-	// ajax: $(table).data('source'),
-	dom: 'lfriptrip',
-	pagingType: 'full_numbers',
-	scroller: false,
-	scrollY: undefined,
-	columns: [
-		{data: 'title', width: "30%" },
-		{data: 'text', width: "70%" }
-	]
+// This updates the articles-datatables config from the scrolling checkbox.
+const setScrollingState = dt_controller => {
+	const config = dt_controller.config
+	const old_scrolling = config.scroller
+	const toggler = $('#toggle-scrolling')
+	const scrolling = toggler && toggler[0] &&  toggler[0].checked
+	config.scroller = scrolling
+	config.scrollY = scrolling ? 600 : undefined
+	return (scrolling !== old_scrolling)
 }
+
+if (!window.dataTableInitializers) {
+	window.dataTableInitializers = {}
+}
+window.dataTableInitializers['articles-datatable'] = setScrollingState
 
 export default class extends Controller {
 
-  connect() {
-    const table = this.element
-		const {id, className} = table
-
-		// Initialize the datatable on connect.
-		if (id !== "articles-datatable") return
-
-    // Don't double initialize.
-    if (table.className.includes('dataTable')) return
-
-		// Scroll if checked.
-		const checkbox = $("#toggle-scrolling")
-		const scrolling = checkbox && checkbox[0].checked
-		tableConfig.scroller = scrolling
-		tableConfig.scrollY = scrolling ? scrollY : undefined
-
-		tableConfig.ajax = $(table).data('source')
-    tableHandle = $(table).DataTable(Object.assign({}, tableConfig))
-  }
-
-	// Destroy the handle to trigger re-initialization.
-	// https://datatables.net/reference/api/destroy()
-	toggle_scrolling(event) {
-		tableHandle && tableHandle.destroy()
-	}
-
-  show_counts(event) {
-    const data = event.detail[0]
+  show_counts = event => {
+    const data = event.detail[0] || {}
     $("#article-count").html(data.articles)
     $("#comment-count").html(data.comments)
   }
+
+  toggle_scrolling = event => {
+		const dt = window.dataTableControllers['articles-datatable']
+		if (!dt) return
+
+		const changed = setScrollingState(dt)
+		if (changed && dt.tableHandle) {
+			dt.tableHandle.destroy() // This triggers a reconnect.
+		}
+	}
+
 }

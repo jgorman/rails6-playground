@@ -1,5 +1,6 @@
 
 <%= form_tag generator_articles_path,
+  id: 'form',
   'data-controller': 'articles',
   'data-action': 'ajax:success->articles#show_counts',
   remote: true, format: :json do %>

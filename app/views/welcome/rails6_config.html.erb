@@ -83,29 +83,23 @@
   <h4 class="mt-4">Datatables.net</h4>
   <!--             ============== -->
 
-  <table id="table_id" class="display">
-    <thead>
-      <tr>
-        <th>First</th>
-        <th>Last</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
+  <table id="datatables-sample"
+    class="table table-hover table-striped table-bordered"
+    data-controller="datatables"
+    data-datatables-config="<%= {
+      debug: true,
+      columns: [
+        {title: 'First' },
+        {title: 'Last' },
+      ],
+      data: [
+        [ "Tenzin", "Gyatso" ],
+        [ "Barak", "Obama" ],
+        [ "Nelson", "Mandela" ],
+      ],
+    }.to_json %>"
+  >
   </table>
-
-  <script>
-    var data = [
-      [ "John", "Gorman" ],
-      [ "Barak", "Obama" ],
-      [ "Nelson", "Mandela" ],
-    ]
-    $(() => {
-      const table = $('#table_id')
-      if (table[0].className.includes('dataTable')) return
-      table.DataTable({ data })
-    })
-  </script>
 
 
   <h4 class="mt-4">Bootstrap Tooltips</h4>

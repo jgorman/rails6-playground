@@ -12,17 +12,21 @@ Scrolling:
 </p>
  
 <table id="articles-datatable"
-        class="table table-hover table-striped table-bordered text-wrap"
-        data-controller="articles"
-        data-source="<%= datatable_articles_path %>">
-
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  </tbody>
+  class="table table-hover table-striped table-bordered"
+  data-controller="datatables"
+  data-datatables-config="<%= { 
+    debug: true,
+    serverSide: true,
+    ajax: datatable_articles_path,
+    processing: true,
+    scroller: true,
+    scrollY: 600,
+    dom: 'lfriptrip',
+    pagingType: 'full_numbers',
+    columns: [
+      {title: 'Title', data: 'title', width: "30%" },
+      {title: 'Text', data: 'text', width: "70%" },
+    ],
+  }.to_json %>"
+>
 </table>
