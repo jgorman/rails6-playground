@@ -83,22 +83,19 @@
   <h4 class="mt-4">Datatables.net</h4>
   <!--             ============== -->
 
-  <table id="datatables-sample"
+  <table id="rails6-datatable"
     class="table table-hover table-striped table-bordered"
-    data-controller="datatables"
-    data-datatables-config="<%= {
-      debug: true,
-      columns: [
-        {title: 'First' },
-        {title: 'Last' },
-      ],
-      data: [
-        [ "Tenzin", "Gyatso" ],
-        [ "Barak", "Obama" ],
-        [ "Nelson", "Mandela" ],
-      ],
-    }.to_json %>"
+    data-controller="datatable"
+    data-datatable-config="<%= { debug: true }.to_json %>"
   >
+    <thead>
+      <tr><th>First</th><th>Last</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Tenzin</td><td>Gyatso</td></tr>
+      <tr><td>Barak</td><td>Obama</td></tr>
+      <tr><td>Nelson</td><td>Mandela</td></tr>
+    </tbody>
   </table>
 
 
