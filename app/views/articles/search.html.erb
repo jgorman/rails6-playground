@@ -11,21 +11,19 @@ Scrolling:
 />
 </p>
  
-<table id="articles-datatable"
-  class="table table-hover table-striped table-bordered"
+<table id="articles-datatable" class="table"
   data-controller="articles-datatable"
   data-articles-datatable-config="<%= { 
     debug: true,
     serverSide: true,
     ajax: datatable_articles_path,
-    processing: true,
     scroller: true,
     scrollY: 600,
     dom: 'lfriptrip',
     pagingType: 'full_numbers',
     columns: [
       {title: 'Title', data: 'title', width: "30%" },
-      {title: 'Text', data: 'text', width: "70%" },
+      {title: 'Text', data: 'text' },
     ],
   }.to_json %>"
 >

@@ -1,34 +1,27 @@
 import { Controller } from "stimulus"
 
 /*
- * In app/view/articles/search.html.erb
- *
 
-		<table id="articles-datatable"
-			class="table table-hover table-striped table-bordered"
-			data-controller="datatable"
-			data-datatable-config="<%= {
-				debug: true,
-				serverSide: true,
-				ajax: datatable_articles_path,
-				processing: true,
-				scroller: true,
-				scrollY: 600,
-				dom: 'lfriptrip',
-				pagingType: 'full_numbers',
-				columns: [
-					{title: 'Title', data: 'title', width: "30%" },
-					{title: 'Text', data: 'text', width: "70%" },
-				],
-			}.to_json %>"
-		>
-		</table>
+  <table id="articles-datatable" class="table"
+    data-controller="datatable"
+    data-datatable-config="<%= {
+      debug: true,
+      serverSide: true,
+      ajax: datatable_articles_path,
+      dom: 'lfriptrip',
+      columns: [
+        {title: 'Title', data: 'title', width: "30%" },
+        {title: 'Text', data: 'text', },
+      ],
+    }.to_json %>"
+  >
+  </table>
 
 */
 
 var dt_id = 0
 
-export default class extends Controller {
+class StimulusDataTables extends Controller {
 
 	isTable = () => this.element.nodeName === 'TABLE'
 
@@ -58,10 +51,11 @@ export default class extends Controller {
 		this.dt_id = ++dt_id
 		this.element.controller = this
 
-		// Component config takes precedence over subclass pre-initialize config.
+		// Setting scrollY fixes page reload bug in autoWidth.
+		const pre_config = Object.assign({ scrollY: undefined }, this.config)
 		const config_s = this.data.get('config')
 		const config = config_s ? JSON.parse(config_s) : {}
-		this.config = Object.assign({}, this.config, config)
+		this.config = Object.assign({}, pre_config, config)
 
 		this.logger('initialize')
 		return this.config
@@ -92,3 +86,5 @@ export default class extends Controller {
 	}
 
 }
+
+export default StimulusDataTables
