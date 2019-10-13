@@ -1,4 +1,4 @@
-import { Controller } from "stimulus"
+import { Controller } from 'stimulus'
 
 /*
  * In app/view/articles/generate.html.erb
@@ -24,11 +24,9 @@ import { Controller } from "stimulus"
 */
 
 export default class extends Controller {
-
   show_counts = event => {
     const data = event.detail[0] || {}
-    $("#article-count").html(data.articles)
-    $("#comment-count").html(data.comments)
+    $('#article-count').html(data.articles)
+    $('#comment-count').html(data.comments)
   }
-
 }

@@ -1,37 +1,44 @@
 /*
- * Rails libraries.
+ * Rails startup.
  */
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-
+require('@rails/ujs').start()
+require('turbolinks').start()
+require('@rails/activestorage').start()
+require('channels')
 
 /*
  * npm libraries.
  */
 
+// If jQuery is not already registered in window.jQuery do it here.
+window.jQuery = window.$ = require('jquery')
+
+// See https://datatables.net/download/npm
+// Stimulus-datatables will call: window.jQuery(table).DataTable(config)
+require('datatables.net')
+require('datatables.net-bs4')
+require('datatables.net-scroller-bs4')
+
 require('bootstrap')
 
+// See ../web/controllers/particles_controller.js
+require('particles.js')
+
 // Stimulus setup.
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
+import { Application } from 'stimulus'
+import { definitionsFromContext } from 'stimulus/webpack-helpers'
 const application = Application.start()
 const controllers = require.context('../web/controllers', true, /\.js$/)
 application.load(definitionsFromContext(controllers))
 
 // See https://github.com/adrienpoly/stimulus-flatpickr
-import Flatpickr from "stimulus-flatpickr";
-application.register("flatpickr", Flatpickr);
+import Flatpickr from 'stimulus-flatpickr'
+application.register('flatpickr', Flatpickr)
 
-// See ../web/controllers/particles_controller.js
-require('particles.js')
-
-// See https://datatables.net/manual/installation
-require('datatables.net')
-require('datatables.net-bs4')
-require('datatables.net-scroller-bs4')
+// See https://github.com/jgorman/stimulus-datatables
+import Datatable from 'stimulus-datatables'
+application.register('datatable', Datatable)
 
 /*
  * App setup.
