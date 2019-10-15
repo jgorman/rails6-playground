@@ -25,7 +25,41 @@
 
   <div id="particles-js"
     data-controller="particles"
-    data-particles-image="<%= image_path('jg-logo-512x512.png') %>"
+    data-particles-config="<%= {
+      particles: {
+        number: {
+          value: 20,
+          density: {
+            value_area: 200,
+          },
+        },
+        shape: {
+          type: 'image',
+          image: {
+            src: image_path('jg-logo-512x512.png')
+          },
+        },
+        size: {
+          value: 10,
+          random: true,
+        },
+        move: {
+          speed: 1,
+        },
+      },
+      interactivity: {
+        events: {
+          onhover: {
+            mode: 'repulse',
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 50,
+          },
+        },
+      },
+    }.to_json %>"
   >
     <div id="logo-jgio">
       <a href="/">

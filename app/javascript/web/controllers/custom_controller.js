@@ -28,7 +28,8 @@ export default class extends DataTable {
   }
 
   teardown() {
-    this.log('finished', { controller: this })
+    // Any before or after teardown actions. Here we write to console.log.
+    this.log('finished', { dt: this })
 
     // Call the super method to destroy the DataTable instance.
     super.teardown()

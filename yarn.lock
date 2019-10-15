@@ -6580,10 +6580,10 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-stimulus-datatables@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stimulus-datatables/-/stimulus-datatables-1.0.0.tgz#2c34df3ff83c0faf2ebe75e435ad82f1361a7840"
-  integrity sha512-pqcuA9PvKcMEGD5Lk+v4x++ReIJdtsk/VyVkQx1+SAEg5BMvV76ADOVfXy9lpfp8kPKlqdhGEvpu1+JvwWyntw==
+stimulus-datatables@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/stimulus-datatables/-/stimulus-datatables-1.0.1.tgz#d1009667f2f30e311f05ce98315b864cd77c6dd8"
+  integrity sha512-O/D4lginb1PFGULKAcFZSnuJQ/4P+unlY7pGw78OzZp+JK7Sbi+w+8zO9PW9cbSdWuJODOmB1evsoAuXYEPYUA==
   dependencies:
     datatables.net "^1.10.20"
     stimulus "^1.1.1"
