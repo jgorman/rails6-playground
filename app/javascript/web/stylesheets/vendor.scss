@@ -1,4 +1,3 @@
-@import '~bootstrap/scss/bootstrap';
 
 $fa-font-path: "~font-awesome/fonts";
 @import '~font-awesome/scss/font-awesome';
@@ -9,12 +8,12 @@ $fa-font-path: "~font-awesome/fonts";
 @import 'datatables.net-bs4/css/dataTables.bootstrap4';
 @import 'datatables.net-scroller-bs4/css/scroller.bootstrap4.css';
 
+// Enable Datatable text wrapping in scrolling mode.
+table.dataTable tbody tr td {
+  white-space: normal;
+}
+
 // Kaminari <%= paginate @articles %>
 nav.pagination span {
   margin-right: 10px;
-}
-
-// Datatable cell text wraps in scrolling mode.
-table.dataTable tbody tr td {
-  white-space: normal;
 }

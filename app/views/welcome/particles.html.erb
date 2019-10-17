@@ -1,6 +1,7 @@
 <% @page_title = 'Particles.js Controller' %>
 
-<div id="particles-demo"
+<div id="particles-image-src"
+  style="height: 150px; background-color: #aaaaff;"
   data-controller="particles"
   data-particles-config="<%= {
     particles: {
@@ -18,3 +19,29 @@
   }.to_json %>"
 >
 </div>
+
+<p></p>
+
+<p>
+This demonstrates the
+<a href="https://github.com/jgorman/stimulus-particles.js">stimulus-particles.js</a> controller in action.
+</p>
+
+<p>
+The banner at the top of every page is running a particles instance
+and another instance is running in this demo page.
+</p>
+
+<p>
+The controller takes the Particles configuration from the containing div
+on the page. This allows us to pass parameters such as the webpack
+image_path from rails to the Particles instance.
+</p>
+
+<p>
+Under Turbolinks, navigating away from a Particles page and back without
+cleaning up the running Particles instance would result
+in multiple AnimationsFrames still running in the background, chewing
+up CPU. The Particles controller takes care of the configuration,
+the set up and the clean up.
+</p>

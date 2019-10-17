@@ -35,7 +35,6 @@ import Datatable from 'stimulus-datatables'
 application.register('datatable', Datatable)
 
 // See https://github.com/jgorman/stimulus-particles.js
-//require('particles.js')
 import Particles from 'stimulus-particles.js'
 application.register('particles', Particles)
 
@@ -48,7 +47,8 @@ const requireAll = context => context.keys().map(context)
 
 requireAll(require.context('../web/javascript', false, /\.(js|jsx)$/i))
 
-requireAll(require.context('../web/stylesheets', false, /\.(scss|css)$/i))
+//requireAll(require.context('../web/stylesheets', false, /\.(scss|css)$/i))
+require('../web/stylesheets/index.scss')
 
 const images = require.context('../images', false, /\.(png|svg|jpg)$/i)
 //const imagePath = (name) => images(name, true)

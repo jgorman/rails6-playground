@@ -1,27 +1,33 @@
 <div id="nav-bar">
 
   <%= link_to('Home', root_path,
-              class: "nav-item nav-link") %>
+              class: "nav-link") %>
 
-  <%= link_to('Blank', '/welcome/index',
-              class: "nav-item nav-link") %>
+  <%= link_to('Bootstrap', '/welcome/bootstrap',
+              class: "nav-link") %>
 
-  <%= link_to('Particles', '/welcome/particles',
-              class: "nav-item nav-link") %>
+  <%= link_to('Disabled', '/welcome/index',
+              class: "nav-link disabled") %>
+
+  <%= link_to('Forbidden', '/welcome/index',
+              class: "nav-link forbidden") %>
+
+  <%= link_to('Particles.js', '/welcome/particles',
+              class: "nav-link") %>
 
   <%= link_to('Custom Datatable', '/welcome/custom-datatable',
-              class: "nav-item nav-link") %>
+              class: "nav-link") %>
 
   <%= link_to('Ajax Datatable', '/welcome/ajax-datatable',
-              class: "nav-item nav-link") %>
+              class: "nav-link") %>
 
   <%= link_to('Articles', articles_path,
-              class: "nav-item nav-link") %>
+              class: "nav-link") %>
 
   <%= link_to('Article Search', search_articles_path,
-              class: "nav-item nav-link") %>
+              class: "nav-link") %>
 
   <%= link_to('Rails 6 Config', '/welcome/rails6-config',
-              class: "nav-item nav-link") %>
+              class: "nav-link") %>
 
 </div>

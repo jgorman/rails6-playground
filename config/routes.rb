@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "welcome/index"
   get "welcome/particles"
+  get "welcome/bootstrap"
   get "welcome/rails6-config"
   get "welcome/ajax-datatable"
   get "welcome/custom-datatable"

@@ -22,6 +22,10 @@ p.page-alert {
 #nav-bar
 {
   background-color: $nav-bar;
+
+  .forbidden {
+    display: none;
+  }
 }
 
 form label {

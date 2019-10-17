@@ -1,14 +1,32 @@
-// welcome controller styles here.
+// welcome controller page styles here.
 
-.welcome_index {
+.welcome {
+
   p {
     color: blue;
   }
+
 }
 
-#particles-demo,
-{
-  background-color: #aaaaff;
-  height: 350px;
-}
+.bootstrap {
 
+  .variables {
+
+    .cyan {
+      background-color: $cyan;
+    }
+
+    .info {
+      background-color: $info;
+    }
+
+  }
+
+  .row {
+    div {
+      background-color: $teal;
+      border: 1px solid black;
+    }
+  }
+
+}
