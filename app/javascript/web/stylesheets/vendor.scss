@@ -13,6 +13,22 @@ table.dataTable tbody tr td {
   white-space: normal;
 }
 
+// Datatable controls left aligned.
+div.dataTables_filter,
+div.dataTables_length, {
+  text-align: left !important;
+  display: inline-block;
+  margin-right: 20px;
+}
+div.dataTables_info {
+  text-align: left !important;
+}
+div.dataTables_paginate {
+  ul.pagination {
+    justify-content: flex-start !important;
+  }
+}
+
 // Kaminari <%= paginate @articles %>
 nav.pagination span {
   margin-right: 10px;

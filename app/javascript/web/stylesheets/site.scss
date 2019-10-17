@@ -32,12 +32,3 @@ form label {
   color: $labels;
   font-weight: bold;
 }
-
-// Datatable controls left aligned.
-div.dataTables_filter,
-div.dataTables_info {
-  text-align: left !important;
-}
-ul.pagination {
-  justify-content: flex-start !important;
-}

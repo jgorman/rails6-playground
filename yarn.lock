@@ -1476,13 +1476,13 @@ browserify-zlib@^0.2.0:
     pako "~1.0.5"
 
 browserslist@^4.0.0, browserslist@^4.6.0, browserslist@^4.6.4, browserslist@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.0.tgz#9ee89225ffc07db03409f2fee524dc8227458a17"
-  integrity sha512-9rGNDtnj+HaahxiVV38Gn8n8Lr8REKsel68v1sPFfIGEK6uSXTY3h9acgiT1dZVtOOUtifo/Dn8daDQ5dUgVsA==
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.1.tgz#bd400d1aea56538580e8c4d5f1c54ac11b5ab468"
+  integrity sha512-QtULFqKIAtiyNx7NhZ/p4rB8m3xDozVo/pi5VgTlADLF2tNigz/QH+v0m5qhn7XfHT7u+607NcCNOnC0HZAlMg==
   dependencies:
-    caniuse-lite "^1.0.30000989"
-    electron-to-chromium "^1.3.247"
-    node-releases "^1.1.29"
+    caniuse-lite "^1.0.30000999"
+    electron-to-chromium "^1.3.284"
+    node-releases "^1.1.36"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1631,7 +1631,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30000999:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30000999:
   version "1.0.30000999"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000999.tgz#427253a69ad7bea4aa8d8345687b8eec51ca0e43"
   integrity sha512-1CUyKyecPeksKwXZvYw0tEoaMCo/RwBlXmEtN5vVnabvO0KPd9RQLcaAuR9/1F+KDMv6esmOFWlsXuzDk+8rxg==
@@ -2508,10 +2508,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.247:
-  version "1.3.282"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.282.tgz#16118ae9c79a32ea93a17591d5b16e28d10fc08d"
-  integrity sha512-irSaDeCGgfMu1OA30bhqIBr+dx+pDJjRbwCpob7YWqVZbzXblybNzPGklVnWqv4EXxbkEAzQYqiNCqNTgu00lQ==
+electron-to-chromium@^1.3.284:
+  version "1.3.285"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.285.tgz#909576db2ee4dfec74a87aa30c92f66ebfc78748"
+  integrity sha512-DYR9KW723sUbGK++DCmCmM95AbNXT4Q0tlCFMcYijFjayhuDqlGYR68OemlP8MJj0gjkwdeItIUfd0oLCgw+4A==
 
 elliptic@^6.0.0:
   version "6.5.1"
@@ -4493,7 +4493,7 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.1.29:
+node-releases@^1.1.36:
   version "1.1.36"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.36.tgz#44b7cb8254138e87bdbfa47761d0f825e20900b4"
   integrity sha512-ggXhX6QGyJSjj3r+6ml2LqqC28XOWmKtpb+a15/Zpr9V3yoNazxJNlcQDS9bYaid5FReEWHEgToH1mwoUceWwg==
@@ -6582,10 +6582,10 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-stimulus-datatables@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/stimulus-datatables/-/stimulus-datatables-1.0.2.tgz#51bc31ec25e8c55d20d852e5e5a7bc667acb6626"
-  integrity sha512-FVp1H6leewesW5hNuqBN0hfMO1dXUbCLky9W371Uf1oCw9rNJeZV71EQ1hg/XAfSbgPiwWVWegRAcnjHZc60AQ==
+stimulus-datatables@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stimulus-datatables/-/stimulus-datatables-1.0.3.tgz#29594ebd88378471a23ec4e3ed487227376e1e91"
+  integrity sha512-IhdK/OS+SbbzgmZEOZbYtgDS7y+v4uRwJYQyW2HW9h+peEsCTaGjQBBRn/ppbJ0C5+SFEr/kctkIJ3wFShgIpw==
   dependencies:
     datatables.net "^1.10.20"
     stimulus "^1.1.1"
@@ -6598,10 +6598,10 @@ stimulus-flatpickr@^1.1.2:
     flatpickr ">=4.6.0"
     stimulus "^1.1.1"
 
-stimulus-particles.js@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/stimulus-particles.js/-/stimulus-particles.js-1.0.1.tgz#8b93749686f461b6df84f3ca5df045d78da4b92b"
-  integrity sha512-Pbl6PozhIIUgm435lMO1EDlPgx91ewY9lTRNlcpb4g9lqGRm1JwcKe1RhMnChtObfYCOvXXLsyKfFP5MCkWoSA==
+stimulus-particles.js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stimulus-particles.js/-/stimulus-particles.js-1.0.3.tgz#286a1d1a2668b07c1c97a63109bb8e1aff7a8ff5"
+  integrity sha512-Ja8zo1pR3dvj+vKdmSaNTrdgBmmWDRZ7Gi3BVVlPlWZVPuCcKDMqPvoGAZ9ragKYCHYiIfekdTgCJDQwFnzbcw==
   dependencies:
     particles.js "^2.0.0"
     stimulus "^1.1.1"

@@ -19,9 +19,9 @@
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "stimulus": "^1.1.1",
-    "stimulus-datatables": "^1.0.2",
+    "stimulus-datatables": "^1.0.3",
     "stimulus-flatpickr": "^1.1.2",
-    "stimulus-particles.js": "^1.0.1",
+    "stimulus-particles.js": "^1.0.3",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
