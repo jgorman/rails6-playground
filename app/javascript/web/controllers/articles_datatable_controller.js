@@ -1,7 +1,6 @@
 import DataTable from 'stimulus-datatables'
 
 export default class extends DataTable {
-
   initialize() {
     if (!this.isBooting()) return
 

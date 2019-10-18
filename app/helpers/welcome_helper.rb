@@ -1,2 +1,1 @@
-module WelcomeHelper
-end
+module WelcomeHelper; end

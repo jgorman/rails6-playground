@@ -1,13 +1,12 @@
 class ArticlesController < ApplicationController
-
   def index
-    @page_title = "Articles"
+    @page_title = 'Articles'
     @articles = Article.page(params[:page])
     #puts "$$$$$$$ #{current_user.inspect}"
   end
 
   def search
-    @page_title = "Article search"
+    @page_title = 'Article search'
   end
 
   def datatable
@@ -15,7 +14,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @page_title = "Article"
+    @page_title = 'Article'
     @article = Article.find(params[:id])
     #current_user.roles = [:staff, :clerk]
     #puts "####### #{current_user.inspect}"
@@ -24,12 +23,12 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @page_title = "New Article"
+    @page_title = 'New Article'
     @article = Article.new
   end
 
   def edit
-    @page_title = "Edit Article"
+    @page_title = 'Edit Article'
     @article = Article.find(params[:id])
   end
 
@@ -39,7 +38,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -49,7 +48,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to @article
     else
-      render "edit"
+      render 'edit'
     end
   end
 
@@ -61,7 +60,7 @@ class ArticlesController < ApplicationController
   end
 
   def generate
-    @page_title = "Generate Articles"
+    @page_title = 'Generate Articles'
 
     @articles = Article.count
     @comments = Comment.count
@@ -79,7 +78,8 @@ class ArticlesController < ApplicationController
   end
 
   private
-    def article_params
-      params.require(:article).permit(:title, :text)
-    end
+
+  def article_params
+    params.require(:article).permit(:title, :text)
+  end
 end

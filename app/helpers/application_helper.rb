@@ -1,18 +1,17 @@
 module ApplicationHelper
-
   def escape(str)
     ERB::Util.html_escape(str)
   end
 
   def page_title
-    @page_title || "Rails 6 Playground"
+    @page_title || 'Rails 6 Playground'
   end
 
   def image_path(name)
     asset_pack_path("media/images/#{name}")
   end
 
-  module NoArgument end
+  module NoArgument; end
   def tr_show(model, field, value = NoArgument)
     case model
     when Symbol
@@ -20,14 +19,12 @@ module ApplicationHelper
     when String
       model_name = model
     else
-      model_name = model.class.name.sub(/.*::/, "").underscore
-      if value == NoArgument
-        value = model.send(field.to_sym)
-      end
+      model_name = model.class.name.sub(/.*::/, '').underscore
+      value = model.send(field.to_sym) if value == NoArgument
     end
 
     if value == NoArgument
-      value = ""
+      value = ''
       if model = instance_variable_get("@#{model_name}")
         value = model.send(field.to_sym)
       end
@@ -36,16 +33,21 @@ module ApplicationHelper
     id = "#{model_name}_#{field}"
     begin
       desc = I18n.translate!("helpers.label.#{model_name}.#{field}")
-    rescue
+    rescue StandardError
       desc = field.to_s.titleize
     end
-    tr = "
+    tr =
+      "
 <div class=\"row\">
-  <div class=\"col-sm-3\"><label for=\"#{id}\">#{escape(desc)}</label></div>
-  <div class=\"col\" id=\"#{id}\">#{escape(value)}</div>
+  <div class=\"col-sm-3\"><label for=\"#{id}\">#{
+        escape(desc)
+      }</label></div>
+  <div class=\"col\" id=\"#{id}\">#{
+        escape(value)
+      }</div>
 </div>
-".html_safe
+"
+        .html_safe
     tr
   end
-
 end
