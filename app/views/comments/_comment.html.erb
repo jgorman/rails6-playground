@@ -5,10 +5,10 @@
 
 <div class="container-fluid">
   <div class="row mb-3">
-  <div class="col-sm-12">
-    <%= link_to "Delete", [comment.article, comment],
+    <div class="col-sm-12">
+      <%= link_to "Delete", [comment.article, comment],
                 method: :delete,
                 data: { confirm: "Are you sure?" } %>
-  </div>
+    </div>
   </div>
 </div>

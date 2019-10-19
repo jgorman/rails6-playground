@@ -1,16 +1,16 @@
-
 <p>
-<%= link_to "New article", new_article_path %>
-|
-<%= link_to "Generate articles", generate_articles_path %>
-|
-Scrolling:
-<input id="toggle-scrolling" type="checkbox" checked
+  <%= link_to "New article", new_article_path %>
+  |
+  <%= link_to "Generate articles", generate_articles_path %>
+  |
+  Scrolling:
+  <input id="toggle-scrolling" type="checkbox" checked
        data-controller="articles-datatable"
        data-action="change->articles-datatable#toggle_scrolling"
-/>
+  />
 </p>
- 
+
+
 <table id="articles-datatable" class="table"
   data-controller="articles-datatable"
   data-articles-datatable-config="<%= { 

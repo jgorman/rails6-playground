@@ -1,8 +1,7 @@
-
 <p>
-<%= link_to "New article", new_article_path %>
-|
-<%= link_to "Generate articles", generate_articles_path %>
+  <%= link_to "New article", new_article_path %>
+  |
+  <%= link_to "Generate articles", generate_articles_path %>
 </p>
 
 <%= page_entries_info @articles, entry_name: 'articles' %>
@@ -12,28 +11,28 @@
 <div class="table-responsive">
   <table class="table">
     <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Destroy</th>
-    </tr>
+      <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th>Show</th>
+        <th>Edit</th>
+        <th>Destroy</th>
+      </tr>
     </thead>
 
     <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to "Show", article_path(article) %></td>
-        <td><%= link_to "Edit", edit_article_path(article) %></td>
-        <td><%= link_to "Destroy", article_path(article),
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
+          <td><%= link_to "Show", article_path(article) %></td>
+          <td><%= link_to "Edit", edit_article_path(article) %></td>
+          <td><%= link_to "Destroy", article_path(article),
                 method: :delete,
                 data: { confirm: "Are you sure?" } %></td>
 
-      </tr>
-    <% end %>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>

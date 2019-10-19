@@ -24,14 +24,14 @@
   <p>The page loaded counter is <span id="page-ready">0</span>.</p>
 
   <p id="turbolinks-result">Navigate to another page, then back here.
-      If nothing changes, Turbolinks is not running because each visit is
-      a full page load with a fresh new window object and a fresh
-      page loaded counter.</p>
+    If nothing changes, Turbolinks is not running because each visit is
+    a full page load with a fresh new window object and a fresh
+    page loaded counter.</p>
 
   <p>The page loaded counter goes up by 2 per visit under Turbolinks.
-     Turbolinks first shows the page preview from cache. When the
-     new page arrives from the server, that replaces the cached
-     copy.</p>
+    Turbolinks first shows the page preview from cache. When the
+    new page arrives from the server, that replaces the cached
+    copy.</p>
 
   <script>
     $(() => {
@@ -49,9 +49,9 @@
 
   <p>
     <a href="https://flatpickr.js.org">Flatpickr Doc</a>
-  <br />
+    <br />
     <a href="https://github.com/adrienpoly/stimulus-flatpickr">Stimulus Flatpickr Doc</a>
-  <br />
+    <br />
     <a href="https://github.com/adrienpoly/rails_stimulus_flatpickr">Stimulus Flatpickr Rails Demo</a>
   </p>
 
@@ -89,12 +89,24 @@
     data-datatable-config="<%= { debug: true }.to_json %>"
   >
     <thead>
-      <tr><th>First</th><th>Last</th></tr>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>Tenzin</td><td>Gyatso</td></tr>
-      <tr><td>Barak</td><td>Obama</td></tr>
-      <tr><td>Nelson</td><td>Mandela</td></tr>
+      <tr>
+        <td>Tenzin</td>
+        <td>Gyatso</td>
+      </tr>
+      <tr>
+        <td>Barak</td>
+        <td>Obama</td>
+      </tr>
+      <tr>
+        <td>Nelson</td>
+        <td>Mandela</td>
+      </tr>
     </tbody>
   </table>
 
