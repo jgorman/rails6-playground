@@ -3,7 +3,10 @@
 $cyan: #00ff00;
 
 // Bootstrap variables.
+// https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
 @import '~bootstrap/scss/bootstrap';
 
 // Site variables.
-$mygreen: #00ff00;
+$headers:   #aaaaaa;
+$labels:    #aaaaaa;
+$nav-bar:   #dddddd;

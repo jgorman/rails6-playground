@@ -23,44 +23,46 @@
 
     <div class="container-fluid font-weight-light">
 
-      <div id="particles-js"
-    data-controller="particles"
-    data-particles-config="<%= {
-      particles: {
-        number: {
-          value: 20,
-          density: {
-            value_area: 200,
+      <div class="top-banner">
+        <div id="particles-js"
+        data-controller="particles"
+        data-particles-config="<%= {
+        particles: {
+          number: {
+            value: 20,
+            density: {
+              value_area: 200,
+            },
+          },
+          shape: {
+            type: 'image',
+            image: {
+              src: image_path('jg-logo-50x50.png')
+            },
+          },
+          size: {
+            value: 10,
+            random: true,
+          },
+          move: {
+            speed: 1,
           },
         },
-        shape: {
-          type: 'image',
-          image: {
-            src: image_path('jg-logo-50x50.png')
+        interactivity: {
+          events: {
+            onhover: {
+              mode: 'repulse',
+            },
+          },
+          modes: {
+            repulse: {
+              distance: 50,
+            },
           },
         },
-        size: {
-          value: 10,
-          random: true,
-        },
-        move: {
-          speed: 1,
-        },
-      },
-      interactivity: {
-        events: {
-          onhover: {
-            mode: 'repulse',
-          },
-        },
-        modes: {
-          repulse: {
-            distance: 50,
-          },
-        },
-      },
-    }.to_json %>"
-  >
+      }.to_json %>"
+    >
+
     <div id="logo-jgio">
       <a href="/">
         <%= image_pack_tag "jg-logo.svg", id: 'logo' %>
@@ -98,9 +100,10 @@
       <% end %>
 
       <br />
-      <%= yield %>
-      <br />
+        <%= yield %>
+        <br />
 
+      </div>
     </div>
   </div>
 

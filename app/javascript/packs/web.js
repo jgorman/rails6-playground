@@ -47,7 +47,6 @@ const requireAll = context => context.keys().map(context)
 
 requireAll(require.context('../web/javascript', false, /\.(js|jsx)$/i))
 
-//requireAll(require.context('../web/stylesheets', false, /\.(scss|css)$/i))
 require('../web/stylesheets/index.scss')
 
 const images = require.context('../images', false, /\.(png|svg|jpg)$/i)
