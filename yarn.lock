@@ -6607,10 +6607,10 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-stimulus-datatables@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/stimulus-datatables/-/stimulus-datatables-1.0.3.tgz#29594ebd88378471a23ec4e3ed487227376e1e91"
-  integrity sha512-IhdK/OS+SbbzgmZEOZbYtgDS7y+v4uRwJYQyW2HW9h+peEsCTaGjQBBRn/ppbJ0C5+SFEr/kctkIJ3wFShgIpw==
+stimulus-datatables@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/stimulus-datatables/-/stimulus-datatables-1.0.5.tgz#603505fec6df8e595c617d72f841efd783ccb991"
+  integrity sha512-7qxXaGdFAt7iuOrps7GIx22ymWUeiHMBqEUoMydpUva2kTZlnwzQSTmjIccjUKz0R2tUAj/WPaSvx37PgS71pA==
   dependencies:
     datatables.net "^1.10.20"
     stimulus "^1.1.1"
@@ -6623,10 +6623,10 @@ stimulus-flatpickr@^1.1.2:
     flatpickr ">=4.6.0"
     stimulus "^1.1.1"
 
-stimulus-particles.js@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/stimulus-particles.js/-/stimulus-particles.js-1.0.3.tgz#286a1d1a2668b07c1c97a63109bb8e1aff7a8ff5"
-  integrity sha512-Ja8zo1pR3dvj+vKdmSaNTrdgBmmWDRZ7Gi3BVVlPlWZVPuCcKDMqPvoGAZ9ragKYCHYiIfekdTgCJDQwFnzbcw==
+stimulus-particles.js@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/stimulus-particles.js/-/stimulus-particles.js-1.0.5.tgz#ee868e124137bb83b082de548f78ef6d54fe9cd9"
+  integrity sha512-0I2IeVufSp7OAg7mwIyEyg+f/O/lLDIOQ7jQCul3NL6J7Irxh4qcsCsI0EvpEc4hXGgqtOYC06SbgF0gRqKSaQ==
   dependencies:
     particles.js "^2.0.0"
     stimulus "^1.1.1"
