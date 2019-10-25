@@ -1,12 +1,13 @@
 
 // Customize Bootstrap variables.
-$cyan: #00ff00;
+$cyan: #ff00ff;
 
-// Bootstrap variables.
+// Import the recompiled Bootstrap variables.
 // https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
 
-// Site variables.
+// Non-bootstrap site variables.
 $headers:   #aaaaaa;
 $labels:    #aaaaaa;
 $nav-bar:   #dddddd;
