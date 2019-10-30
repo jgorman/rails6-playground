@@ -20,7 +20,7 @@ require('bootstrap')
 import { Application } from 'stimulus'
 import { definitionsFromContext } from 'stimulus/webpack-helpers'
 const application = Application.start()
-const controllers = require.context('../web/controllers', true, /\.js$/)
+const controllers = require.context('../controllers', true, /\.js$/)
 application.load(definitionsFromContext(controllers))
 
 // See https://github.com/adrienpoly/stimulus-flatpickr
@@ -45,9 +45,9 @@ application.register('particles', Particles)
 // https://github.com/webpack/docs/wiki/context
 const requireAll = context => context.keys().map(context)
 
-requireAll(require.context('../web/javascript', false, /\.(js|jsx)$/i))
+requireAll(require.context('../javascript', false, /\.(js|jsx)$/i))
 
-require('../web/stylesheets')
+require('../stylesheets')
 
 const images = require.context('../images', false, /\.(png|svg|jpg)$/i)
 //const imagePath = (name) => images(name, true)
