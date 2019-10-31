@@ -3,9 +3,7 @@
 @import '../variables';
 
 .bootstrap-demo {
-
   .variables {
-
     .cyan {
       background-color: $cyan;
     }
@@ -13,7 +11,6 @@
     .info {
       background-color: $info;
     }
-
   }
 
   .row {
@@ -22,5 +19,4 @@
       border: 1px solid black;
     }
   }
-
 }

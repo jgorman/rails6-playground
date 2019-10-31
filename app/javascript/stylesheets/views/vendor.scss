@@ -2,7 +2,7 @@
 
 @import '../variables';
 
-$fa-font-path: "~font-awesome/fonts";
+$fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
 @import '~flatpickr/dist/flatpickr';
@@ -18,7 +18,7 @@ table.dataTable tbody tr td {
 
 // Datatable controls left aligned.
 div.dataTables_filter,
-div.dataTables_length, {
+div.dataTables_length {
   text-align: left !important;
   display: inline-block;
   margin-right: 20px;

@@ -4,7 +4,11 @@
 
 @import '../variables';
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   text-align: center;
   color: $headers;
 }
@@ -17,8 +21,7 @@ p.page-alert {
   color: red;
 }
 
-#nav-bar
-{
+#nav-bar {
   background-color: $nav-bar;
 
   .forbidden {
