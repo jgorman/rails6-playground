@@ -23,8 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'kaminari'
 gem 'faker'
+gem 'kaminari'
+gem 'octicons_helper'
 gem 'ajax-datatables-rails'
 
 group :development, :test do

@@ -5,6 +5,8 @@
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
+@import '@primer/octicons/build/build.css';
+
 @import '~flatpickr/dist/flatpickr';
 @import '~flatpickr/dist/themes/material_red';
 
