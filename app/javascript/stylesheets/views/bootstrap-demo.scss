@@ -5,18 +5,7 @@
 .bootstrap-demo {
   .variables {
     .cyan {
-      background-color: $cyan;
-    }
-
-    .info {
-      background-color: $info;
-    }
-  }
-
-  .row {
-    div {
-      background-color: $teal;
-      border: 1px solid black;
+      color: $cyan;
     }
   }
 }

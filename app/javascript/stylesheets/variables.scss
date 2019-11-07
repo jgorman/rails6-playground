@@ -1,12 +1,17 @@
 // Customize Bootstrap variables.
 $cyan: #ff00ff;
 
-// Import the recompiled Bootstrap variables.
-// https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+// Recompile Bootstrap using the customized variables.
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+
+// Direct links for debugging: "$ scss variables.scss"
+//@import '../../../node_modules/bootstrap/scss/functions';
+//@import '../../../node_modules/bootstrap/scss/variables';
+//@debug 'color("body") is #{color("body")}';
 
 // Non-bootstrap site variables.
 $headers: #aaaaaa;
 $labels: #aaaaaa;
 $nav-bar: #dddddd;
+
