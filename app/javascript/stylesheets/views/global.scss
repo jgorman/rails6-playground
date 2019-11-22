@@ -29,7 +29,25 @@ p.page-alert {
   }
 }
 
-form label {
-  color: $labels;
-  font-weight: bold;
+/* * * * * * * * * * * *
+ * Forms
+ */
+
+form {
+  label {
+    color: $labels;
+    font-weight: bold;
+  }
+
+  // Invalid inputs.
+  .invalid {
+    border-color: $danger;
+  }
+
+  // input:required { border-style: dotted; }
+
+  // Validation errors.
+  .error {
+    color: $danger;
+  }
 }

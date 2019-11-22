@@ -2,7 +2,9 @@ require 'faker'
 
 class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
-  validates :title, presence: true, length: { minimum: 5 }
+
+  validates :title, length: { minimum: 4 }
+  validates :text, length: { minimum: 5 }
 
   # Generate fake articles with comments.
   #

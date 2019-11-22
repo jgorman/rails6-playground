@@ -18,8 +18,8 @@ require('bootstrap')
 
 // Stimulus setup.
 import { Application } from 'stimulus'
-import { definitionsFromContext } from 'stimulus/webpack-helpers'
 const application = Application.start()
+import { definitionsFromContext } from 'stimulus/webpack-helpers'
 const controllers = require.context('../controllers', true, /\.js$/)
 application.load(definitionsFromContext(controllers))
 
@@ -37,6 +37,10 @@ application.register('datatable', Datatable)
 // See https://github.com/jgorman/stimulus-particles.js
 import Particles from 'stimulus-particles.js'
 application.register('particles', Particles)
+
+// See https://github.com/jgorman/stimulus-form-validation
+import Form from 'stimulus-form-validation'
+application.register('form', Form)
 
 /*
  * App setup.
