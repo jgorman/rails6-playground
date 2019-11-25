@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
-    "@primer/octicons": "^9.2.0",
+    "@primer/octicons": "^9.3.1",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
@@ -17,13 +17,13 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
+    "rails-datatables": "^1.0.6",
     "rails-erb-loader": "^5.5.2",
     "rails-form-validation": "^1.0.1",
     "rails-particles.js": "^1.0.6",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "stimulus": "^1.1.1",
-    "stimulus-datatables": "^1.0.5",
     "stimulus-flatpickr": "^1.1.2",
     "turbolinks": "^5.2.0"
   },

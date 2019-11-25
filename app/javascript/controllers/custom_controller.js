@@ -1,4 +1,4 @@
-import DataTable from 'stimulus-datatables'
+import DataTable from 'rails-datatables'
 
 export default class extends DataTable {
   initialize() {

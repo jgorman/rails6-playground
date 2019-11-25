@@ -27,11 +27,11 @@ application.load(definitionsFromContext(controllers))
 import Flatpickr from 'stimulus-flatpickr'
 application.register('flatpickr', Flatpickr)
 
-// See https://github.com/jgorman/stimulus-datatables
+// See https://github.com/jgorman/rails-datatables
 require('datatables.net')
 require('datatables.net-bs4')
 require('datatables.net-scroller-bs4')
-import Datatable from 'stimulus-datatables'
+import Datatable from 'rails-datatables'
 application.register('datatable', Datatable)
 
 // See https://github.com/jgorman/rails-particles.js
