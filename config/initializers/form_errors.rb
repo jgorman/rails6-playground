@@ -40,7 +40,7 @@ ActionView::Base.field_error_proc =
 
     else
 
-      # Return the field as is.
+      # Return the element as is.
       html = html_tag
 
     end

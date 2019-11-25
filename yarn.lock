@@ -6045,6 +6045,14 @@ rails-form-validation@^1.0.1:
   dependencies:
     stimulus "^1.1.1"
 
+rails-particles.js@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/rails-particles.js/-/rails-particles.js-1.0.6.tgz#31acc42f6a12aa773144a8a06946eee76b85a2e9"
+  integrity sha512-f8DdF/+6F3Y/wv45Sx7yVHuyCvOCN8dPwCymcYnWzYuarZLScaJuD0P5blQ7PzWbLXD4eBZZC21uAq6yNvVT3w==
+  dependencies:
+    particles.js "^2.0.0"
+    stimulus "^1.1.1"
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -6850,14 +6858,6 @@ stimulus-flatpickr@^1.1.2:
   dependencies:
     flatpickr ">=4.6.0"
     stimulus ">=1.1.1"
-
-stimulus-particles.js@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/stimulus-particles.js/-/stimulus-particles.js-1.0.5.tgz#ee868e124137bb83b082de548f78ef6d54fe9cd9"
-  integrity sha512-0I2IeVufSp7OAg7mwIyEyg+f/O/lLDIOQ7jQCul3NL6J7Irxh4qcsCsI0EvpEc4hXGgqtOYC06SbgF0gRqKSaQ==
-  dependencies:
-    particles.js "^2.0.0"
-    stimulus "^1.1.1"
 
 stimulus@>=1.1.1, stimulus@^1.1.1:
   version "1.1.1"

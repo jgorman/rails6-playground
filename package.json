@@ -19,12 +19,12 @@
     "prop-types": "^15.7.2",
     "rails-erb-loader": "^5.5.2",
     "rails-form-validation": "^1.0.1",
+    "rails-particles.js": "^1.0.6",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "stimulus": "^1.1.1",
     "stimulus-datatables": "^1.0.5",
     "stimulus-flatpickr": "^1.1.2",
-    "stimulus-particles.js": "^1.0.5",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

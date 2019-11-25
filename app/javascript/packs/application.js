@@ -34,8 +34,8 @@ require('datatables.net-scroller-bs4')
 import Datatable from 'stimulus-datatables'
 application.register('datatable', Datatable)
 
-// See https://github.com/jgorman/stimulus-particles.js
-import Particles from 'stimulus-particles.js'
+// See https://github.com/jgorman/rails-particles.js
+import Particles from 'rails-particles.js'
 application.register('particles', Particles)
 
 // See https://github.com/jgorman/rails-form-validation
