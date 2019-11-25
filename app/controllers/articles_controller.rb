@@ -1,12 +1,9 @@
 class ArticlesController < ApplicationController
   def index
-    @page_title = 'Articles'
     @articles = Article.page(params[:page])
-    #puts "$$$$$$$ #{current_user.inspect}"
   end
 
   def search
-    @page_title = 'Article search'
   end
 
   def datatable
@@ -14,21 +11,14 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @page_title = 'Article'
     @article = Article.find(params[:id])
-    #current_user.roles = [:staff, :clerk]
-    #puts "####### #{current_user.inspect}"
-    #puts "####### #{current_user.roles.inspect}"
-    #current_user.update({})
   end
 
   def new
-    @page_title = 'New Article'
     @article = Article.new
   end
 
   def edit
-    @page_title = 'Edit Article'
     @article = Article.find(params[:id])
   end
 
@@ -60,8 +50,6 @@ class ArticlesController < ApplicationController
   end
 
   def generate
-    @page_title = 'Generate Articles'
-
     @articles = Article.count
     @comments = Comment.count
   end

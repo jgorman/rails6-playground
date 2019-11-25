@@ -18,12 +18,12 @@
     "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
     "rails-erb-loader": "^5.5.2",
+    "rails-form-validation": "^1.0.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "stimulus": "^1.1.1",
     "stimulus-datatables": "^1.0.5",
     "stimulus-flatpickr": "^1.1.2",
-    "stimulus-form-validation": "^1.0.0",
     "stimulus-particles.js": "^1.0.5",
     "turbolinks": "^5.2.0"
   },

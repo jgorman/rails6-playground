@@ -38,8 +38,8 @@ application.register('datatable', Datatable)
 import Particles from 'stimulus-particles.js'
 application.register('particles', Particles)
 
-// See https://github.com/jgorman/stimulus-form-validation
-import Form from 'stimulus-form-validation'
+// See https://github.com/jgorman/rails-form-validation
+import Form from 'rails-form-validation'
 application.register('form', Form)
 
 /*
