@@ -16,18 +16,20 @@ class StimulusDebug extends Controller {
 
   initialize() {
     this.sc_id = ++sc_id
-    const debug = this.data.get('debug').toLowerCase()
-    this.debugOn = debug === 'on' || debug === 'true' || debug === '1'
+    if (this.data.has('debug')) {
+      const debug = this.data.get('debug').toLowerCase()
+      this.debugOn = debug === 'on' || debug === 'true' || debug === '1'
+    }
 
-    this.debug('initialize', { sc: this })
+    this.debug('initialize', { this: this })
   }
 
   connect() {
-    this.debug('connect', { sc: this })
+    this.debug('connect', { this: this })
   }
 
   disconnect() {
-    this.debug('disconnect', { sc: this })
+    this.debug('disconnect', { this: this })
   }
 }
 
